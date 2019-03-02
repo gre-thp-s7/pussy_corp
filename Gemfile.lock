@@ -233,7 +233,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.0)
     table_print (1.5.6)
     thor (0.20.3)
     thread_safe (0.3.6)
@@ -289,7 +288,6 @@ DEPENDENCIES
   simplecov
   spring
   spring-watcher-listen
-  sqlite3
   table_print
   turbolinks
   tzinfo-data
