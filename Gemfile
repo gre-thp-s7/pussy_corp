@@ -5,12 +5,16 @@ ruby '2.5.1'
 
 ################## add by the team ################
 gem 'table_print'
-gem 'jquery-rails'
 gem 'pry'
 gem 'activerecord'
 gem 'dotenv-rails'
 gem 'devise'
 gem 'rspec'
+################# gem front #########################
+gem 'jquery-rails'
+gem "animate-rails"
+gem "font-awesome-rails"
+gem 'bootstrap', '~> 4.3.1'
 ####################################################
 
 
