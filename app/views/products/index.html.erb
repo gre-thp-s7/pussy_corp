@@ -1,0 +1,16 @@
+<div class="row">
+
+<% @products.each do |i| %>
+<div class="card col-sm-3 text-center">
+  <div class="card-header">
+    <p>Event n°<%= i.id %></p>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">titre : <%= i.name %></h5>
+    <p class="card-text">date : <%= i.description %></p>
+    <a href= "events/<%= i.id%>" class="btn btn-primary">En savoir plus</a>
+  </div>
+</div>
+<% end %>
+
+</div>
