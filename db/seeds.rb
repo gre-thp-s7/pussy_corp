@@ -7,12 +7,19 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'faker'
-# User.destroy_all
-# Products.destroy_all
+
+# petit clean de db
+User.destroy_all
+Product.destroy_all
 
 # ActiveRecord::Base.connection.tables.each do |t|
 #   ActiveRecord::Base.connection.reset_pk_sequence!(t)
 # end
+
+
+#create the test-user
+valid_user = User.create!(first_name: "first_name", last_name: "last_name", email: "mail@yopmail.com", password: "azeaze")
+
 
 5.times do |u|
   u = User.create(
@@ -34,3 +41,9 @@ end
   )
   puts "La photo de #{p.name} a été crée"
 end
+
+
+
+
+
+
