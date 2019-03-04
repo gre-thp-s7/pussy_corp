@@ -82,5 +82,5 @@ Product.destroy_all
 
 
   end
-	
-end
+
+end 

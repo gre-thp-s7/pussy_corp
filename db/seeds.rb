@@ -5,7 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
 require 'faker'
 
 # petit clean de db
@@ -22,28 +21,36 @@ valid_user = User.create!(first_name: "first_name", last_name: "last_name", emai
 
 
 5.times do |u|
-  u = User.create(
+  u = User.create!(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
-  encrypted_password: Faker::Internet.password
+  password: Faker::Internet.password
   )
   puts "L\'utilisateur #{u.first_name} a été crée"
 end
 
 
 20.times do |p|
-  p = Product.create(
-  name: Faker::Name.first_name,
+  p = Product.create!(
+  name: Faker::Name.name,
   description: Faker::Quote.most_interesting_man_in_the_world,
   price: rand(5..50),
-  image_url: Faker::LoremPixel.image('50x60', false, 'cats')
+  image_url: Faker::Address.full_address
   )
   puts "La photo de #{p.name} a été crée"
 end
 
+10.times do |o|
+  o = Order.create!(
+    order_number: 10
+  )
+end
+puts "commande 10 créée"
 
-
-
-
-
+10.times do |o|
+  o = Order.create!(
+    order_number: 20
+  )
+end
+puts "commande 20 créée"
