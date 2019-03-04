@@ -5,7 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
 require 'faker'
 
 # petit clean de db
@@ -42,8 +41,16 @@ end
   puts "La photo de #{p.name} a été crée"
 end
 
+10.times do |o|
+  o = Order.create!(
+    order_number: 10
+  )
+end
+puts "commande 10 créée"
 
-
-
-
-
+10.times do |o|
+  o = Order.create!(
+    order_number: 20
+  )
+end
+puts "commande 20 créée"

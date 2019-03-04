@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+  require 'rails_helper'
+
+RSpec.describe User, type: :model do
 
 
 # clean de la database svp!
@@ -48,7 +51,7 @@ User.destroy_all
     describe "#email" do
       it "should not be valid with wrong email" do
       	@valid_user.email = "yopmail.com"
-      
+
 				expect(@valid_user).not_to be_valid
       end
     end
@@ -60,4 +63,5 @@ User.destroy_all
       end
     end
   end
+  pending "add some examples to (or delete) #{__FILE__}"
 end
