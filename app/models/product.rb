@@ -1,6 +1,13 @@
 class Product < ApplicationRecord
 
+<<<<<<< HEAD
 
+=======
+	validates :name, presence: true, uniqueness: true
+  validates :price, presence: true
+  validates :description, presence: true
+  validates :image_url, presence: true, uniqueness: true
+>>>>>>> 73d15609a62e4b535978a37014f0dae4bf85f385
 
 end
 
