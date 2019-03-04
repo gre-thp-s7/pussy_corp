@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   
     # GET /users
     def index
-      @products = Prodruct.all
+      @products = Product.all
     end
   
     # GET /users/1

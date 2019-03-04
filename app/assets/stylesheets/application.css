@@ -12,4 +12,9 @@
  *
  *= require_tree .
  *= require_self
+ *= require animate.min
+ *= require bootstrap.min
+ *= require lightbox
+ *= require font-awesome
+ *= require prettyPhoto
  */

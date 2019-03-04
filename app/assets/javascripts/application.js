@@ -14,3 +14,10 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require jquery_ujs
+//= require popper
+//= require jquery
+//= require bootstrap.min
+//= require lightbox.min
+//= require wow.min
+//= require main
