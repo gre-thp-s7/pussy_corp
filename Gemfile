@@ -14,6 +14,7 @@ gem 'turbolinks'
 gem 'jbuilder'
 gem 'dotenv-rails'
 gem 'activerecord'
+gem 'bootsnap'
 
 group :development, :test do
   gem 'byebug',  '9.0.6', platform: :mri
