@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+<<<<<<< HEAD
 
   has_one :cart
 
@@ -34,4 +35,6 @@ class User < ApplicationRecord
 
 ###############################################
 
+=======
+>>>>>>> 09fd730eee07bb8698a7e4df9096fdaa4f1cf23f
 end
