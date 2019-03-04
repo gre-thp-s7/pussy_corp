@@ -25,7 +25,7 @@ require 'faker'
 end
 
 
-5.times do |p|
+20.times do |p|
   p = Product.create(
   name: Faker::Name.first_name,
   description: Faker::Quote.most_interesting_man_in_the_world,
