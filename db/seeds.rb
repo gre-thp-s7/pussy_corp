@@ -15,7 +15,7 @@ require 'faker'
 User.destroy_all
 
 
-#create the test user  + me
+#create the test-user
 
 valid_user = User.create!(first_name: "first_name", last_name: "last_name", email: "mail@yopmail.com", password: "azeaze")
 
