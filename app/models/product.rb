@@ -5,7 +5,4 @@ class Product < ApplicationRecord
   validates :description, presence: true
   validates :image_url, presence: true, uniqueness: true
 
-
-
-
 end
