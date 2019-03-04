@@ -31,8 +31,10 @@
   </head>
 
   <body>
+    <%= render "layouts/header" %>
     <%= yield %>
-    
+  
+    <%= render "layouts/footer" %>
     <script type="text/javascript" src="javascripts/jquery.js"></script>
     <script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="javascripts/lightbox.min.js"></script>
