@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-
 RSpec.describe User, type: :model do
 
 
@@ -60,4 +59,4 @@ User.destroy_all
       end
     end
   end
-end
+
