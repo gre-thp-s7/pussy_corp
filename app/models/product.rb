@@ -1,6 +1,8 @@
 class Product < ApplicationRecord
 
   has_many :carts
+  has_many :products, through: :carts
+
 
 	validates :name, presence: true, uniqueness: true
   validates :price, presence: true
