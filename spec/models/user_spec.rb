@@ -11,7 +11,8 @@ User.destroy_all
 		@valid_user = User.create!(
 			first_name: "first_name", 
 			last_name: "last_name", 
-			email: "mail@yopmail.com"
+			email: "mail@yopmail.com",
+      password: "azeaze"
 			)
 	end
 
@@ -59,4 +60,4 @@ User.destroy_all
       end
     end
   end
-
+end
