@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'faker'
 # User.destroy_all
 # Products.destroy_all
 
@@ -24,11 +26,11 @@ end
 
 
 5.times do |p|
-  p = Product.create!(
+  p = Product.create(
   name: Faker::Name.first_name,
   description: Faker::Quote.most_interesting_man_in_the_world,
   price: rand(5..50),
-  image_url: Faker::LoremPixel.image('50x60', false, 'cat')
+  image_url: Faker::LoremPixel.image('50x60', false, 'cats')
   )
   puts "La photo de #{p.name} a été crée"
 end
