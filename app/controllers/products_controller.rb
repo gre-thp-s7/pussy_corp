@@ -4,11 +4,13 @@ class ProductsController < ApplicationController
     # GET /users
     def index
       @products = Product.all
+      @rand_product = @products.sample(4)
     end
 
     # GET /users/1
     def show
       @product = Product.find(params[:id])
+      @rand_product = Product.all.sample(4)
       
     end
 
