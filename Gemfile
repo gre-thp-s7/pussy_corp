@@ -12,9 +12,11 @@ gem 'devise'
 gem 'rspec'
 ################# gem front #########################
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem "animate-rails"
 gem "font-awesome-rails"
 gem 'bootstrap', '~> 4.3.1'
+gem 'underscore-rails'
 ####################################################
 
 
