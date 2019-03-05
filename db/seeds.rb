@@ -37,15 +37,20 @@ valid_user = User.create!(first_name: "first_name", last_name: "last_name", emai
 end
 
 
-20.times do |p|
-  p = Product.create!(
-  name: Faker::Name.name,
-  description: Faker::Quote.most_interesting_man_in_the_world,
+####### this line /was for local test/use ########
+13.times do |p|
+  babar = "~/Documents/THP/Final_Project/pussy_corp/pussypics/picture#{p}.png"
+  name = "picture#{p}"
+  p = Product.create(
+  name: name,
+  description: "joli chaton ou un autre truc du style",
   price: rand(5..50),
-  image_url: Faker::Address.full_address
+  image_url: babar
   )
   puts "La photo de #{p.name} a été crée"
-end
+  p.save
+ end
+ ##########################################################  
 
 10.times do |o|
   o = Order.create!(

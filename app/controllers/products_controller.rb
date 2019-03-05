@@ -8,7 +8,8 @@ class ProductsController < ApplicationController
 
     # GET /users/1
     def show
-
+      @product = Product.find(params[:id])
+      
     end
 
     # GET /users/1/edit
@@ -18,6 +19,6 @@ class ProductsController < ApplicationController
     private
       # Use callbacks to share common setup or constraints between actions.
       def set_product
-        # @product = Product.find(params[:id])
+        #@product = Product.find(params[:id])
       end
 end
