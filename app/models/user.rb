@@ -26,11 +26,15 @@ class User < ApplicationRecord
 
 #################### MAILER futur pour test ################
 
-  # after_create :welcome_send
+  after_create :welcome_send
 
-  # def welcome_send
-  #   UserMailer.welcome_email(self).deliver_now
-  # end
+  def welcome_email(user)
+    @user = user
+    @url = "http://pussy-corp.herokuapp.com/login"
+    mail(
+      to: @user.email,
+      subject:'Bienvenue chez Pussy Corp !')
+  end
 
 
 ###############################################

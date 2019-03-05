@@ -46,19 +46,3 @@ end
   )
   puts "La photo de #{p.name} a été crée"
 end
-
-10.times do |o|
-  o = Order.create!(
-    order_number: 10,
-    user_id: User.all.sample.id
-  )
-end
-puts "commande 10 créée"
-
-10.times do |o|
-  o = Order.create!(
-    order_number: 20,
-    user_id: User.all.sample.id
-  )
-end
-puts "commande 20 créée"
