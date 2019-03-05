@@ -9,7 +9,13 @@ require 'faker'
 
 # petit clean de db
 User.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('users')
 Product.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('products')
+Order.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('orders')
+Cart.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('carts')
 
 # ActiveRecord::Base.connection.tables.each do |t|
 #   ActiveRecord::Base.connection.reset_pk_sequence!(t)
@@ -43,14 +49,16 @@ end
 
 10.times do |o|
   o = Order.create!(
-    order_number: 10
+    order_number: 10,
+    user_id: User.all.sample.id
   )
 end
 puts "commande 10 créée"
 
 10.times do |o|
   o = Order.create!(
-    order_number: 20
+    order_number: 20,
+    user_id: User.all.sample.id
   )
 end
 puts "commande 20 créée"
