@@ -295,6 +295,19 @@
   color: #00aeef;
 }
 
+#header .navbar-inverse .navbar-nav  li.active1 > a,  
+#header .navbar-inverse .navbar-nav  li.active > a:focus, 
+#header .navbar-nav.navbar-right li > a:hover,
+.navbar-inverse .navbar-nav > .open > a {
+  background-color: inherit;
+  border: 0;
+  color: #00aeef;
+}
+
+#header .navbar-inverse .navbar-nav  li a:hover{
+  color: #00aeef;
+}
+
 
 /*  Dropdown menu*/
 
@@ -323,7 +336,7 @@ ul.sub-menu {
   position: absolute;
   font-size: 56px;
   top: -13px;
-  color: #0884d5;
+  color: #09aa2c;
 }
 
 #header .navbar-nav li ul.sub-menu li .active .fa-angle-right{
