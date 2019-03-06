@@ -15,4 +15,7 @@ end
   resources :products
   resources :users
   root 'products#index'
+
+  #stripe
+  resources :charges, only: [:new, :create]
 end

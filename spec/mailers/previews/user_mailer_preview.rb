@@ -6,4 +6,17 @@ class UserMailerPreview < ActionMailer::Preview
     UserMailer.welcome_email(User.last)
 
   end
+
+  def order_comfirmation
+
+    UserMailer.order_comfirmation(User.last)
+
+  end
+
+  def admin_order_comfirmation
+
+    UserMailer.admin_order_comfirmation(User.last)
+
+  end
+
 end
