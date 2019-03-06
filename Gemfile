@@ -11,6 +11,8 @@ gem 'dotenv-rails'
 gem 'devise'
 gem 'rspec'
 gem 'stripe'
+################ pour amazon ########################
+gem "aws-sdk-s3", require: false
 ################# gem front #########################
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
