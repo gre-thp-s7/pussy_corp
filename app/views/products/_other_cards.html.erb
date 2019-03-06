@@ -1,0 +1,27 @@
+<section id="related-work" class="padding-top padding-bottom">
+    <div class="container">
+        <div class="row">
+            <h1 class="title text-center">Related Work</h1>
+            <% @rand_product.each do |random| %>
+            <div class="col-sm-3">
+                <div class="portfolio-wrapper">
+                    <div class="portfolio-single">
+                        <div class="portfolio-thumb">
+                            <%= image_tag random.pussy, alt: 'avatar', class:"img-responsive" %>
+                        </div>
+                        <div class="portfolio-view">
+                            <ul class="nav nav-pills">
+                                <li><a href="images/portfolio/1.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="portfolio-info ">
+                        <h2>produit : <%=random.id%></h2>
+                    </div>
+                </div>
+            </div>
+            <%end%>
+        </div>
+    </div>
+</section>
+<!--/#related-work-->
