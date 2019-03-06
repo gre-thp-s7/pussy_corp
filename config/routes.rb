@@ -16,9 +16,6 @@ end
   resources :users
   root 'products#index'
 
-<<<<<<< HEAD
-=======
   #stripe
   resources :charges, only: [:new, :create]
->>>>>>> delivery_iannis
 end

@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<h1>Page du nouveau produit créé</h1>
-
-<p>Produit portant l'id : <%=@product.id%></p>
-<h3>Image associée </h3>
-<%if @product.picture.attached?%>
-  <%= image_tag @product.picture, alt: 'avatar' %>
-<%else%>
-  <p>=== Il n'y a pas d'image liée à ce produit (never append !) ===</p>
-<%end%>
-=======
 <section id="page-breadcrumb">
         <div class="vertical-center sun">
              <div class="container">
@@ -29,7 +18,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <%= image_tag @product.pussy, alt: 'avatar', class:"img-responsive", alt: "" %>
+                    <%= image_tag @product.picture, alt: 'pussy', class:"img-responsive", alt: "" %>
                 </div>
                 <div class="col-sm-6">
                     <div class="project-name overflow">
@@ -72,4 +61,4 @@
     </section>
      <!--/#portfolio-information-->
     <%= render "other_cards"%>
->>>>>>> delivery_iannis
+
