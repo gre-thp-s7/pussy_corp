@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-<<<<<<< HEAD
     before_action :set_product, only: [:show, :edit, :update, :destroy] 
 
 #il faut mettre un  before action avec current_user.is_admin == true
@@ -31,33 +30,19 @@ class ProductsController < ApplicationController
     end  
   end
 
-=======
-    before_action :set_product, only: [:show, :edit, :update, :destroy]
-
-    # GET /users
->>>>>>> delivery_iannis
     def index
       @products = Product.all
       @rand_product = @products.sample(4)
     end
-<<<<<<< HEAD
+
   
     def show
       post_params = params.permit(:id)
-      @product = Product.find(post_params[:id])
-    end
-  
-=======
-
-    # GET /users/1
-    def show
+#      @product = Product.find(post_params[:id])
       @product = Product.find(params[:id])
       @rand_product = Product.all.sample(4)
-      
     end
 
-    # GET /users/1/edit
->>>>>>> delivery_iannis
     def edit
     end
 
