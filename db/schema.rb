@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2019_03_06_131057) do
+=======
 ActiveRecord::Schema.define(version: 2019_03_05_123034) do
+>>>>>>> delivery_iannis
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +40,8 @@ ActiveRecord::Schema.define(version: 2019_03_05_123034) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+<<<<<<< HEAD
+=======
   create_table "carts", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "product_id"
@@ -53,6 +59,7 @@ ActiveRecord::Schema.define(version: 2019_03_05_123034) do
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
+>>>>>>> delivery_iannis
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.integer "price"
@@ -65,6 +72,7 @@ ActiveRecord::Schema.define(version: 2019_03_05_123034) do
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
+    t.boolean "is_admin", default: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -77,6 +85,9 @@ ActiveRecord::Schema.define(version: 2019_03_05_123034) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+<<<<<<< HEAD
+=======
   add_foreign_key "carts", "products"
   add_foreign_key "carts", "users"
+>>>>>>> delivery_iannis
 end
