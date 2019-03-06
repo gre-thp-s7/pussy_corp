@@ -7,6 +7,10 @@ class ProductsController < ApplicationController
       @rand_product = @products.sample(4)
     end
 
+    def new
+
+    end
+
     # GET /users/1
     def show
       @product = Product.find(params[:id])
