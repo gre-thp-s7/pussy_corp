@@ -37,12 +37,13 @@ class ProductsController < ApplicationController
 
   
     def show
-      @product = Product.find(params[:id])
-      @rand_product = Product.all.sample(4)
       post_params = params.permit(:id)
 #      @product = Product.find(post_params[:id])
+      @product = Product.find(params[:id])
+      @rand_product = Product.all.sample(4)
     end
-  
+
+
     def edit
     end
 
