@@ -15,6 +15,4 @@ end
   resources :users
   root 'products#index'
 
-  end
-
 end
