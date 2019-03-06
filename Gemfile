@@ -5,12 +5,19 @@ ruby '2.5.1'
 
 ################## add by the team ################
 gem 'table_print'
-gem 'jquery-rails'
 gem 'pry'
 gem 'activerecord'
 gem 'dotenv-rails'
 gem 'devise'
 gem 'rspec'
+gem 'stripe'
+################# gem front #########################
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem "animate-rails"
+gem "font-awesome-rails"
+gem 'bootstrap', '~> 4.3.1'
+gem 'underscore-rails'
 ####################################################
 
 
@@ -52,7 +59,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8'
   gem 'factory_bot'
   gem 'faker'
-####################################################  
+####################################################
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

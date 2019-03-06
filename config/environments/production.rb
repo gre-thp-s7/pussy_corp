@@ -1,4 +1,11 @@
 Rails.application.configure do
+  
+#==================================
+
+config.action_mailer.perform_deliveries = true
+
+#==================================== 
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -91,6 +98,4 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-
-  config.action_mailer.default_url_options = { :host => 'https://pussy-corp.herokuapp.com/' }
 end

@@ -1,4 +1,12 @@
 Rails.application.configure do
+
+#============= MAILER =====================
+
+# config.action_mailer.delivery_method = :letter_opener
+config.action_mailer.perform_deliveries = true
+
+#==========================================
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
