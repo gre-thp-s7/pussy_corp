@@ -1,28 +1,11 @@
-require 'dotenv'
-Dotenv.load('../../.env')
-
-
 Rails.application.configure do
 
-#==================================
-#====================================
-config.action_mailer.default_url_options = { :host => 'https://pussy-corp.herokuapp.com/' }
+#============= MAILER =====================
 
-config.action_mailer.smtp_settings = {
-  :address        => 'in-v3.mailjet.com',
-  :enable_starttls_auto => true,
-  :port           => 587,
-  :authentication => :plain,
-  :user_name      => ENV['MJ_APIKEY_PUBLIC'],
-  :password       => ENV['MJ_APIKEY_PRIVATE'],
-  :domain         => 'pussy-corp.herokuapp.com'
-  }
+# config.action_mailer.delivery_method = :letter_opener
+config.action_mailer.perform_deliveries = true
 
-config.action_mailer.delivery_method = :mailjet_api
-
-#==================================== 
-
-#===================================
+#==========================================
 
   # Settings specified here will take precedence over those in config/application.rb.
 

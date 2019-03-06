@@ -4,14 +4,17 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Bienvenue à Pussy Corp <%= @user.first_name %>!</h1>
+    <h1><%= @user.first_name %> a passé une commande!</h1>
     <p>
-      Votre compte a été créé avec succés,
+      Commande n°<%= @order.id %>
     <br>
     </p>
     <p>
+      Merci pour votre commande.
+    </p>
+
+    <p>
       Pour vous connecter sur le site, cliquez sur le lien suivant : <%= link_to "Se connecter", @url %>.
     </p>
-    <p>Merci de nous avoir rejoins!</p>
   </body>
 </html>
