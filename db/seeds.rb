@@ -26,44 +26,41 @@ ActiveRecord::Base.connection.reset_pk_sequence!('carts')
 valid_user = User.create!(first_name: "first_name", last_name: "last_name", email: "mail@yopmail.com", password: "azeaze")
 
 
-5.times do |u|
-  u = User.create!(
+5.times do |f|
+  User.create!(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   password: Faker::Internet.password
   )
-  puts "L\'utilisateur #{u.first_name} a été crée"
+  Cart.create!(user: User.all[f])
 end
 
 
 ####### this line /was for local test/use ########
 13.times do |p|
   babar = "~/Documents/THP/Final_Project/pussy_corp/pussypics/picture#{p}.png"
-  name = "picture#{p}"
   p = Product.create(
-  name: name,
+  title: "picture#{p}",
   description: "joli chaton ou un autre truc du style",
-  price: rand(5..50),
+  price: rand(5..50).to_s,
   image_url: babar
   )
-  puts "La photo de #{p.name} a été crée"
+  
   p.save
  end
  ##########################################################  
 
-10.times do |o|
-  o = Order.create!(
-    order_number: 10,
-    user_id: User.all.sample.id
-  )
+ 30.times do |i|
+  CartProduct.create!(cart: Cart.all.sample, product: Product.all.sample)
 end
-puts "commande 10 créée"
 
-10.times do |o|
-  o = Order.create!(
-    order_number: 20,
-    user_id: User.all.sample.id
-  )
+user = User.first
+@products = user.cart.products
+@array = []
+
+@products.each do |item|
+  @array << [item.title, item.description, item.price]
 end
-puts "commande 20 créée"
+
+order = Order.create!(order_command: "hie", product_list: @array , cart: Cart.all[0])
