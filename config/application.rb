@@ -8,6 +8,15 @@ Bundler.require(*Rails.groups)
 
 module PussyCatPic
   class Application < Rails::Application
+
+    #===============================
+    config.action_mailer.delivery_method = :mailjet_api
+
+
+
+
+    #================================
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
