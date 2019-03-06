@@ -17,16 +17,18 @@ Product.destroy_all
 # end
 
 
-#create the test-user
-valid_user = User.create!(first_name: "first_name", last_name: "last_name", email: "mail@yopmail.com", password: "azeaze")
-
+#create the test-user/admin
+User.create!(first_name: "first_name", last_name: "last_name", email: "mail@yopmail.com", password: "azeaze", is_admin: true)
+  puts "###############################################"
+  puts "L\'admin(user) de test a été crée"
+  puts "###############################################"
 
 5.times do |u|
   u = User.create!(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
-  password: Faker::Internet.password
+  password: Faker::Internet.password,
   )
   puts "L\'utilisateur #{u.first_name} a été crée"
 end
