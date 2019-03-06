@@ -10,6 +10,7 @@ gem 'activerecord'
 gem 'dotenv-rails'
 gem 'devise'
 gem 'rspec'
+gem 'stripe'
 ################# gem front #########################
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
