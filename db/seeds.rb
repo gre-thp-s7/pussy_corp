@@ -23,26 +23,26 @@ User.create!(first_name: "first_name", last_name: "last_name", email: "mail@yopm
   puts "L\'admin(user) de test a été crée"
   puts "###############################################"
 
-5.times do |u|
-  u = User.create!(
-  first_name: Faker::Name.first_name,
-  last_name: Faker::Name.last_name,
-  email: Faker::Internet.email,
-  password: Faker::Internet.password,
-  )
-  puts "L\'utilisateur #{u.first_name} a été crée"
-end
+# 5.times do |u|
+#   u = User.create!(
+#   first_name: Faker::Name.first_name,
+#   last_name: Faker::Name.last_name,
+#   email: Faker::Internet.email,
+#   password: Faker::Internet.password,
+#   )
+#   puts "L\'utilisateur #{u.first_name} a été crée"
+# end
 
 
-20.times do |p|
-  p = Product.create!(
-  name: Faker::Name.name,
-  description: Faker::Quote.most_interesting_man_in_the_world,
-  price: rand(5..50),
-  image_url: Faker::Address.full_address
-  )
-  puts "La photo de #{p.name} a été crée"
-end
+# 20.times do |p|
+#   p = Product.create!(
+#   name: Faker::Name.name,
+#   description: Faker::Quote.most_interesting_man_in_the_world,
+#   price: rand(5..50),
+#   image_url: Faker::Address.full_address
+#   )
+#   puts "La photo de #{p.name} a été crée"
+# end
 
 
 

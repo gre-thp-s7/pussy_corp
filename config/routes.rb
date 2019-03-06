@@ -14,4 +14,7 @@ end
   resources :products
   resources :users
   root 'products#index'
+
+  end
+
 end
