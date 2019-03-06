@@ -34,8 +34,8 @@
 				<div class="portfolio-wrapper">
 					<div class="portfolio-single">
 						<div class="portfolio-thumb">
-						<%if product.pussy.attached?%>
-							<%= image_tag product.pussy, alt: 'avatar', class:"img-responsive" %>
+						<%if product.picture.attached?%>
+							<%= image_tag product.picture, alt: 'avatar', class:"img-responsive" %>
 						<%else%>
 							<p>=== Il n'y a pas encore de chatte lié à ce produit ===</p>
 						<%end%>
@@ -43,8 +43,8 @@
 						<div class="portfolio-view">
 							<ul class="nav nav-pills">
 								<li><%= link_to "show", product_path(product.id) %></li>
-								<li><a href="<%= product.pussy%>" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
-								<li><a href="<%= product.pussy%>"><i class="fa fa-shopping-cart"></i></a></li>
+								<li><a href="<%= product.picture%>" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+								<li><a href="<%= product.picture%>"><i class="fa fa-shopping-cart"></i></a></li>
 							</ul>
 						</div>
 					</div>
