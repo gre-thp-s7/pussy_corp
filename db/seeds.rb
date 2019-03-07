@@ -25,7 +25,7 @@ ActiveRecord::Base.connection.reset_pk_sequence!('cart_products')
 
 
 #create the test-user/admin
-User.create!(first_name: "first_name", last_name: "last_name", email: "mail@yopmail.com", password: "azeaze", is_admin: true)
+User.create!(first_name: "first_name", last_name: "last_name", email: "thp.sess7.gre@gmail.com", password: "azeaze", is_admin: true)
   puts "###############################################"
   puts "L\'admin(user) de test a été crée"
   puts "###############################################"

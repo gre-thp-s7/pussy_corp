@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   has_one :cart
   has_many :orders, through: :cart
-
+  #through cart obligatoire ?
 
 	# validates :first_name, presence: true
   # validates :last_name, presence: true
