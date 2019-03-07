@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 2019_03_06_153957) do
   end
 
   create_table "products", force: :cascade do |t|
-    t.string "title"
+    t.string "name"
     t.text "description"
     t.string "price"
     t.string "image_url"
@@ -66,11 +66,7 @@ ActiveRecord::Schema.define(version: 2019_03_06_153957) do
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-<<<<<<< HEAD
     t.boolean "is_admin", default: false
-=======
-    t.boolean "is_admin"
->>>>>>> 3c78eb928e3e20814518c03d46e56dc0c0cf5228
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"

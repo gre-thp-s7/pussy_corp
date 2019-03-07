@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-    before_action :set_product, only: [:show, :edit, :update, :destroy] 
+    before_action :set_product, only: [:show, :edit, :update, :destroy]
 
 #il faut mettre un  before action avec current_user.is_admin == true
 
@@ -27,7 +27,7 @@ class ProductsController < ApplicationController
   puts "###############################################"
       flash[:success] = "produit créé !"
       redirect_to(product_path(@new_product.id))
-    end  
+    end
   end
 
     def index
@@ -35,15 +35,11 @@ class ProductsController < ApplicationController
       @rand_product = @products.sample(4)
     end
 
-<<<<<<< HEAD
-  
-=======
-    def new
 
-    end
+
 
     # GET /users/1
->>>>>>> 3c78eb928e3e20814518c03d46e56dc0c0cf5228
+
     def show
       post_params = params.permit(:id)
 #      @product = Product.find(post_params[:id])

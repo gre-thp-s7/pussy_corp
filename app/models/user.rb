@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_one :cart
   has_many :orders, through: :cart
 
+
 	validates :first_name, presence: true
   validates :last_name, presence: true
 
@@ -30,7 +31,7 @@ class User < ApplicationRecord
 after_create :welcome_email_send
 
 def welcome_email_send
-  
+
   # Tell the UserMailer to send a welcome email after save
   UserMailer.welcome_email(self).deliver_now
 
