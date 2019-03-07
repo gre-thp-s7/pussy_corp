@@ -45,7 +45,7 @@ puts "###############################################"
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     email: Faker::Internet.email,
-    password: Faker::Internet.password
+    password: 'azeaze'
     )
   # puts f
   # puts f.id
@@ -77,29 +77,29 @@ end
 #  end
 ##########################################################
 
- 10.times do |i|
-  c = CartProduct.create!(cart_id: Cart.all.sample.id, product_id: Product.all.sample.id)
-  puts c.cart_id
-  puts c.product_id
-end
-  puts "des produit on été ajouté aux paniers"
-  puts "###############################################"
+#  10.times do |i|
+#   c = CartProduct.create!(cart_id: Cart.all.sample.id, product_id: Product.all.sample.id)
+#   puts c.cart_id
+#   puts c.product_id
+# end
+#   puts "des produit on été ajouté aux paniers"
+#   puts "###############################################"
 
 
-user = User.last
-# puts user
-# puts user.cart.id
-@products_bought = user.cart.cart_products
-@array = []
+# user = User.last
+# # puts user
+# # puts user.cart.id
+# @products_bought = user.cart.cart_products
+# @array = []
 
-@products_bought.each do |item|
-  @array << item.product_id
-end
+# @products_bought.each do |item|
+#   @array << item.product_id
+# end
 
-order = Order.create!(order_command: "hie", product_list: @array , cart: Cart.all[0])
-#puts order
-puts "un seed de commande est fait"
-puts "###############################################"
+# order = Order.create!(order_command: "hie", product_list: @array , cart: Cart.all[0])
+# #puts order
+# puts "un seed de commande est fait"
+# puts "###############################################"
 
 
 

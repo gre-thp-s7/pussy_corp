@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="main-slider">
-                <div class="slide-text" style="z-index: 56">
+                <div class="slide-text" style="position: relative">
 
                     <% if user_signed_in? %>
 
@@ -14,7 +14,7 @@
                     <% else %> 
 
                         <h1>éh toi !</h1>
-                        <p>Si toi aussi t'aime les petites chattes, viens, inscrit toi et tu aura acces a toutes les photos les plus récentes du web</p>
+                        <p>Si toi aussi t'aime les petit(es) chat(tes), viens, inscrit toi et tu aura acces a toutes les photos les plus récentes du web</p>
 
                         <%= link_to "SIGN UP", new_user_session_path, class: "btn btn-common" %>
                     <%end%>
@@ -26,5 +26,6 @@
             </div>
         </div>
     </div>
+
     <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
 </section>

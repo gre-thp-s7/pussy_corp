@@ -1,6 +1,9 @@
 class ProductsController < ApplicationController
 
     before_action :set_product, only: [:show, :edit, :update, :destroy] 
+    before_action :authenticate_admin, only: [:new, :create]
+
+
     require 'open-uri'
 
   #il faut mettre un  before action avec current_user.is_admin == true
@@ -57,8 +60,20 @@ class ProductsController < ApplicationController
     end
 
     private
+
       # Use callbacks to share common setup or constraints between actions.
       def set_product
         #@product = Product.find(params[:id])
       end
 end
+
+
+
+
+
+
+
+
+
+
+
