@@ -1,24 +1,23 @@
 class Product < ApplicationRecord
 
-has_one_attached :pussy
-before_save :grab_image
-
-def grab_image
-  downloaded_image = (open('https://loremflickr.com/g/400/400/cat/'))
-  self.pussy.attach(io: downloaded_image, filename: 'image.png')
-end
+	validates :name, presence: true, uniqueness: true
+  validates :price, presence: true
+  validates :description, presence: true
+  has_one_attached :picture
 
   has_many :carts
   has_many :orders, through: :carts
 
 
-	validates :name, presence: true, uniqueness: true
-  validates :price, presence: true
-  validates :description, presence: true
-  validates :image_url, presence: true, uniqueness: true
+
+### these lines will permit yaya to test aws with active storrage ####
+# before_save :grab_image
+
+# def grab_image
+#   downloaded_image = (open('https://loremflickr.com/g/400/400/cat/'))
+#   self.pussy.attach(io: downloaded_image, filename: 'image.png')
+# end
+##################################################
+
 
 end
-
-
-
-# un item pourra être ajouté dans plusieurs carts

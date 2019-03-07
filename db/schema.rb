@@ -39,8 +39,10 @@ ActiveRecord::Schema.define(version: 2019_03_05_123034) do
   create_table "carts", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "product_id"
+    t.bigint "order_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_carts_on_order_id"
     t.index ["product_id"], name: "index_carts_on_product_id"
     t.index ["user_id"], name: "index_carts_on_user_id"
   end
@@ -65,6 +67,7 @@ ActiveRecord::Schema.define(version: 2019_03_05_123034) do
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
+    t.boolean "is_admin", default: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -77,6 +80,7 @@ ActiveRecord::Schema.define(version: 2019_03_05_123034) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "carts", "orders"
   add_foreign_key "carts", "products"
   add_foreign_key "carts", "users"
 end
