@@ -9,8 +9,8 @@ class User < ApplicationRecord
   has_many :orders, through: :cart
 
 
-	validates :first_name, presence: true
-  validates :last_name, presence: true
+	# validates :first_name, presence: true
+  # validates :last_name, presence: true
 
 # ho, tout l'email en minuscule ;-)
   before_save { self.email = email.downcase }
@@ -34,6 +34,18 @@ def welcome_email_send
 
   # Tell the UserMailer to send a welcome email after save
   UserMailer.welcome_email(self).deliver_now
+
+end
+#=============================================
+
+#=================== CART =================
+# 
+after_create :create_cart
+
+def create_cart
+
+  @cart = Cart.new
+  @cart.save
 
 end
 #=============================================

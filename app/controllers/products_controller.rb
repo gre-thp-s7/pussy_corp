@@ -44,10 +44,7 @@ require 'open-uri'
       @last_product3 = Product.find_by(id: @nb_products-2)
       @rand_product = @products.sample(4)
     end
-
-
-
-
+    
     # GET /users/1
 
     def show
