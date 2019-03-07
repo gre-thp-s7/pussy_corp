@@ -1,4 +1,5 @@
 class Order < ApplicationRecord
+<<<<<<< HEAD
   belongs_to :users, optional: true
   has_many :carts
   has_many :products, through: :carts
@@ -18,4 +19,7 @@ end
 
 
 
+=======
+  belongs_to :cart
+>>>>>>> 3c78eb928e3e20814518c03d46e56dc0c0cf5228
 end

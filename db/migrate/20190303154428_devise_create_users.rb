@@ -6,7 +6,11 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       # Add attributes
       t.string :first_name
       t.string :last_name
+<<<<<<< HEAD
       t.boolean :is_admin, default: false
+=======
+      t.boolean :is_admin
+>>>>>>> 3c78eb928e3e20814518c03d46e56dc0c0cf5228
       
       ## Database authenticatable
       t.string :email,              null: false, default: ""

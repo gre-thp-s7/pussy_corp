@@ -35,7 +35,15 @@ class ProductsController < ApplicationController
       @rand_product = @products.sample(4)
     end
 
+<<<<<<< HEAD
   
+=======
+    def new
+
+    end
+
+    # GET /users/1
+>>>>>>> 3c78eb928e3e20814518c03d46e56dc0c0cf5228
     def show
       post_params = params.permit(:id)
 #      @product = Product.find(post_params[:id])
