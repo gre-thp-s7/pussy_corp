@@ -8,14 +8,14 @@ has_one_attached :picture
 
 
 
-### these lines will permit yaya to test aws with active storrage ####
+## these lines will permit yaya to test aws with active storrage ####
 # before_save :grab_image
 
 # def grab_image
 #   downloaded_image = (open('https://loremflickr.com/g/400/400/cat/'))
-#   self.pussy.attach(io: downloaded_image, filename: 'image.png')
+#   self.picture.attach(io: downloaded_image, filename: 'image.png')
 # end
-##################################################
+#################################################
 
 
 end

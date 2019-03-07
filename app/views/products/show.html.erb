@@ -22,15 +22,15 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="project-name overflow">
-                        <h2 class="bold">Sailing Vivamus </h2>
+                        <h2 class="bold"><%= @product.name %></h2>
                         <ul class="nav navbar-nav navbar-default">
-                            <li><a href="#"><i class="fa fa-clock-o"></i>February11,2014</a></li>
+                            <li><a href="#"><i class="fa fa-clock-o"></i><%= @product.created_at %></a></li>
                             <li><a href="#"><i class="fa fa-tag"></i>Branding</a></li>
                         </ul>
                     </div>
                     <div class="project-info overflow">
-                        <h3>Project Info</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus nibh sed elimttis adipiscing. Fusce in hendrerit purus. Suspendisse potenti. Proin quis eros odio, dapibus dictum mauris. Donec nisi libero, adipiscing id pretium eget, consectetur sit amet leo. Nam at eros quis mi egestas fringilla non nec purus.</p>
+                        <h3>DESCRIPTION DU PRODUIT</h3>
+                        <p><%= @product.description %></p>
                         <ul class="elements">
                             <li><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
                             <li><i class="fa fa-angle-right"></i> Donec tincidunt felis quis ipsum porttitor, non rutrum lorem rhoncus.</li>
@@ -49,7 +49,7 @@
                     <div class="client overflow">
                         <h3>Price:</h3>
                         <ul class="nav navbar-nav navbar-default">
-                            <li><a href="#" style="font-size: 16px;">10,00 <i class="fa fa-dollar"></i></a></li>
+                            <li><a href="#" style="font-size: 16px;"><%= @product.price %> <i class="fa fa-euro"></i></a></li>
                         </ul>
                     </div>
                     <div class="live-preview">

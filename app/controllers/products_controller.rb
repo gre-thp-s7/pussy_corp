@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
-    before_action :set_product, only: [:show, :edit, :update, :destroy]
 
+    before_action :set_product, only: [:show, :edit, :update, :destroy] 
+require 'open-uri'
 #il faut mettre un  before action avec current_user.is_admin == true
 
   def new
@@ -14,12 +15,17 @@ class ProductsController < ApplicationController
     @num_of_this_product = @nb_products + 1
 
     post_params = params.require(:product).permit(:description, :price, :picture)
+#binding.pry
+    @new_product = Product.new
+    @new_product.description = post_params[:description]
 
-    @new_product = Product.new(post_params)
+    @new_product.price = post_params[:price]
 
     @new_product.name = "pussy_picture_#{@num_of_this_product}"
 
     @new_product.picture.attach(post_params[:picture])
+    #(io: post_params[:picture], filename: "#{@new_product.name}")
+
 
     if @new_product.save!
   puts "###############################################"
