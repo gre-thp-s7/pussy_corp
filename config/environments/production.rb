@@ -49,7 +49,7 @@ config.action_mailer.perform_deliveries = true
 ##################### yaya went here #################
   # Store uploaded files on the local file system (see config/storage.yml for options)
 #  config.active_storage.service = :local
-  config.active_storage.service = :local
+  config.active_storage.service = :amazon
 #######################################################  
 
   # Mount Action Cable outside main process or domain

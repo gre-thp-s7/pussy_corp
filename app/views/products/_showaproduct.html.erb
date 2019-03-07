@@ -1,0 +1,32 @@
+<section id="portfolio-information" class="padding-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <%= image_tag @product.picture, alt: 'pussy', class:"img-responsive", alt: "" %>
+            </div>
+            <div class="col-sm-6">
+                <div class="project-name overflow">
+                    <h2 class="bold"><%= @product.name %></h2>
+                    <ul class="nav navbar-nav navbar-default">
+                        <li><a href="#"><i class="fa fa-clock-o"></i><%= @product.created_at %></a></li>
+                    </ul>
+                </div>
+                <div class="project-info overflow">
+                    <h3>DESCRIPTION DU PRODUIT</h3>
+                    <p><%= @product.description %></p>
+
+                </div>
+
+                <div class="client overflow">
+                    <h3>Price:</h3>
+                    <ul class="nav navbar-nav navbar-default">
+                        <li><a href="#" style="font-size: 16px;"><%= @product.price %> <i class="fa fa-euro"></i></a></li>
+                    </ul>
+                </div>
+                <div class="live-preview">
+                    <a href="#" class="btn btn-common">  <i class="fa fa-shopping-cart"></i>      Add To Card </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

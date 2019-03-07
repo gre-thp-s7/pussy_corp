@@ -38,6 +38,10 @@ require 'open-uri'
 
     def index
       @products = Product.all
+      @nb_products = Product.all.length
+      @last_product1 = Product.find_by(id: @nb_products)
+      @last_product2 = Product.find_by(id: @nb_products-1)
+      @last_product3 = Product.find_by(id: @nb_products-2)
       @rand_product = @products.sample(4)
     end
 
