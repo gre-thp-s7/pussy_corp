@@ -14,13 +14,12 @@ class UserMailer < ApplicationMailer
 
   end
 
-  def order_comfirmation(user)
+  def order_comfirmation(order)
 
-    @order = Order.new
+    @user = order.user
+    @products = order.product_list
 
-    @user = User.new
-
-    @url = "lien de sa page profil"
+    @url = "http://pussy-corp.herokuapp.com/login"
 
     mail(
       to: @user.email,
@@ -31,14 +30,14 @@ class UserMailer < ApplicationMailer
   #attachments['file.jpg'] = File.read('path/to/file.jpg')
   end
 
-  def admin_order_comfirmation
+  def admin_order_comfirmation(order)
 
-    @user = user
+    @user = User.where(admin: true)
 
-    # @url = ADMIN PAGE
+    @url = "http://pussy-corp.herokuapp.com/login"
 
     mail(
-      to: "thp.sess7.gre@gmail.com",
+      to: @user.email,
       subject:'Un client à passé une commande'
       )
 
