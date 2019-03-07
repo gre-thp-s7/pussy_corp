@@ -40,10 +40,7 @@ require 'open-uri'
       @products = Product.all
       @rand_product = @products.sample(4)
     end
-
-
-
-
+    
     # GET /users/1
 
     def show

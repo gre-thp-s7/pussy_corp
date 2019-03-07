@@ -40,9 +40,9 @@ User.create!(first_name: "first_name", last_name: "last_name", email: "mail@yopm
   )
   puts f
   puts f.id
-  c = Cart.create!(user_id: f.id)
-  puts c
-  puts c.user_id
+  # c = Cart.create!(user_id: f.id)
+  # puts c
+  # puts c.user_id
 end
 
 
