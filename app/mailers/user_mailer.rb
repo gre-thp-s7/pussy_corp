@@ -1,6 +1,6 @@
 class UserMailer < ApplicationMailer
   default from: 'no-reply@pussy_corp.com'
-  
+
   def welcome_email(user)
 
     @user = user
@@ -16,9 +16,11 @@ class UserMailer < ApplicationMailer
 
   def order_comfirmation(user)
 
-    @order = Order
+    @order = Order.new
 
-    @user = User
+    @user = User.new
+
+    @url = "lien mort"
 
     # @url = LIEN DE SA PAGE PROFIL
 
@@ -28,7 +30,7 @@ class UserMailer < ApplicationMailer
       )
 
     #Pièce jointe
-    attachments['file.jpg'] = File.read('path/to/file.jpg')
+  #  attachments['file.jpg'] = File.read('path/to/file.jpg')
   end
 
   def admin_order_comfirmation

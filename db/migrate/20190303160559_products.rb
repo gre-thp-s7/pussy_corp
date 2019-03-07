@@ -1,12 +1,10 @@
 class Products < ActiveRecord::Migration[5.2]
   def change
     create_table :products do |t|
-    t.string :name
-    t.integer :price
-    t.text :description
-    t.string :image_url
-
-    t.timestamps
+      t.string :name
+      t.text :description
+      t.string :price
+      t.string :image_url
     end
   end
 end

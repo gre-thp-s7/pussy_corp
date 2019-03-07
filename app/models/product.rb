@@ -1,12 +1,10 @@
 class Product < ApplicationRecord
 
-	validates :name, presence: true, uniqueness: true
-  validates :price, presence: true
-  validates :description, presence: true
-  has_one_attached :picture
 
-  has_many :carts
-  has_many :orders, through: :carts
+
+has_many :cart_products
+has_many :carts, through: :cart_products
+has_one_attached :picture
 
 
 

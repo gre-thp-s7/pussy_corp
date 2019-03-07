@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+
     before_action :set_product, only: [:show, :edit, :update, :destroy] 
 require 'open-uri'
 #il faut mettre un  before action avec current_user.is_admin == true
@@ -32,7 +33,7 @@ require 'open-uri'
   puts "###############################################"
       flash[:success] = "produit créé !"
       redirect_to(product_path(@new_product.id))
-    end  
+    end
   end
 
     def index
@@ -40,7 +41,11 @@ require 'open-uri'
       @rand_product = @products.sample(4)
     end
 
-  
+
+
+
+    # GET /users/1
+
     def show
       post_params = params.permit(:id)
 #      @product = Product.find(post_params[:id])
