@@ -3,6 +3,7 @@ class Product < ApplicationRecord
 
 
 has_many :cart_products
+# pas sur de la ligne du dessous
 has_many :carts, through: :cart_products
 has_one_attached :picture
 
