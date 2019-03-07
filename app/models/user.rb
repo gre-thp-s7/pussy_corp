@@ -38,16 +38,4 @@ def welcome_email_send
 end
 #=============================================
 
-#=================== CART =================
-# 
-after_create :create_cart
-
-def create_cart
-
-  @cart = Cart.new
-  @cart.save
-
-end
-#=============================================
-
 end
