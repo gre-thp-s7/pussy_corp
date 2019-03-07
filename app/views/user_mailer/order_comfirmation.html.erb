@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Voici votre commande <%= @user.first_name %></h1>
+    <p>
+      Vous avez commandé la ou les photos suivante.s :
+    <%= @products %>
+    <br>
+    </p>
+    <p>
+    Vous trouverez en pièce jointe vos achats.
+
+    Merci pour votre commande.
+    </p>
+    <p>
+    Pour vous connecter sur le site, cliquez sur le lien suivant : <%= link_to "Se connecter", @url %>.
+    </p>
+  </body>
+</html>
+
+
+

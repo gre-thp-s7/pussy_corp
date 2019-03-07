@@ -1,4 +1,11 @@
 Rails.application.configure do
+  
+#==================================
+config.action_mailer.default_url_options = { :host => 'pussy-corp.herokuapp.com' }
+config.action_mailer.perform_deliveries = true
+
+#==================================== 
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -38,8 +45,12 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
+
+##################### yaya went here #################
   # Store uploaded files on the local file system (see config/storage.yml for options)
-  config.active_storage.service = :local
+#  config.active_storage.service = :local
+  config.active_storage.service = :amazon
+#######################################################  
 
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
@@ -91,6 +102,4 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-
-  config.action_mailer.default_url_options = { :host => 'https://pussy-corp.herokuapp.com/' }
 end

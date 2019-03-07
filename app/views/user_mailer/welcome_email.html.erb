@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Bienvenue à Pussy Corp <%= @user.first_name %>!</h1>
+    <p>
+      Votre compte a été créé avec succés,
+    <br>
+    </p>
+    <p>
+      Pour vous connecter sur le site, cliquez sur le lien suivant : <%= link_to "Se connecter", @url %>.
+    </p>
+    <p>Merci de nous avoir rejoins!</p>
+  </body>
+</html>
