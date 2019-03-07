@@ -1,7 +1,7 @@
-<section id="portfolio-information" class="padding-top">
+<section id="portfolio-information" class="padding-top" style="padding-top: 80px">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-6" style="padding-left: 75px">
                 <%= image_tag @product.picture, alt: 'pussy', class:"img-responsive", alt: "" %>
             </div>
             <div class="col-sm-6">
@@ -18,13 +18,13 @@
                 </div>
 
                 <div class="client overflow">
-                    <h3>Price:</h3>
+                    <h3>Price :  <span style="color: #C03035"> <%= @product.price %> <i class="fa fa-euro"></i></span></h3>
                     <ul class="nav navbar-nav navbar-default">
-                        <li><a href="#" style="font-size: 16px;"><%= @product.price %> <i class="fa fa-euro"></i></a></li>
+                        <li><a href="#" style="font-size: 16px;"> </a></li>
                     </ul>
                 </div>
                 <div class="live-preview">
-                    <a href="#" class="btn btn-common">  <i class="fa fa-shopping-cart"></i>      Add To Card </a>
+                    <a href="#" class="btn btn-common" style="margin-top: 37px">  <i class="fa fa-shopping-cart"></i>      Add To Card </a>
                 </div>
             </div>
         </div>

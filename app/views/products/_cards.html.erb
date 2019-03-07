@@ -1,20 +1,16 @@
 <%= render "products/portfoliobanner" %>
 
-	<!--/#action-->
-
 <section id="portfolio">
 	<div class="container">
 		<div class="row ">
 
-			<!--/#portfolio-filter-->
 			<% render "products/categoryesoverpicture" %>
 
-			<div class="portfolio-items">
+			<div class="portfolio-items" style="margin-top: 60px">
 				<% @products.each do |product| %>
 					<div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded logos">
 						<div class="portfolio-wrapper">
-							<div class="portfolio-single">
-								
+							<div class="portfolio-single">					
 								<div class="portfolio-thumb">
 									<%if product.picture.attached?%>
 										<%= image_tag product.picture, alt: 'avatar', class:"img-responsive" %>
@@ -22,7 +18,6 @@
 										<p>=== Il n'y a pas encore de chatte lié à ce produit ===</p>
 									<%end%>
 								</div>
-
 								<div class="portfolio-view">
 									<ul class="nav nav-pills">
 										<li><%= link_to "show", product_path(product.id) %></li>
@@ -30,13 +25,10 @@
 										<li><a href="<%= product.picture%>"><i class="fa fa-shopping-cart"></i></a></li>
 									</ul>
 								</div>
-
 							</div>
-
-							<div class="portfolio-info ">
-								<h2>produit : <%=product.id%></h2>
+							<div class="portfolio-info text-center">
+								<h2><%=product.name%></h2>
 							</div>
-
 						</div>
 					</div>
 				<%end%>

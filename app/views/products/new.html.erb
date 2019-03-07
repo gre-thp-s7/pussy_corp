@@ -1,16 +1,27 @@
-<h1>ICI LA CREATION D'UN NOUVEAU PRODUIT !</h1>
-<%= form_for @new_product do |f| %>
-<label>description</label>
-  <%= f.text_area :description %>
-  <p>
-<label>Prix</label>
-  <%= f.text_field :price %>
-</p>
-<label>image associée</label>
-  <%= f.file_field :picture %>
-</p>
-<div class="form-group">
-  <button type="submit" class="btn btn-primary">Créer</button>
-</div>
 
-<% end %>
+<div class="container">
+  <div class="row">
+  <div class="col-md-3"></div>
+    <div class="col-md-6 offset-md-3">
+      <br><br><br>
+      <h2 class="h1 mb-3 font-weight-normal text-center">ICI LA CREATION D'UN NOUVEAU PRODUIT !</h2>
+
+		<%= form_for @new_product do |f| %>
+		<label>description</label>
+		  <%= f.text_area :description %>
+		  <p>
+		<label>Prix</label>
+		  <%= f.text_field :price %>
+		</p>
+		<label>image associée</label>
+		  <%= f.file_field :picture %>
+		</p>
+
+        <div class="actions">
+          <%= f.submit "Créer", class: "btn btn-submit btn-lg btn-block" %>
+        </div>
+
+      <% end %>
+    </div>
+  </div>
+</div>

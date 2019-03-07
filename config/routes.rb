@@ -18,4 +18,5 @@ end
 
   #stripe
   resources :charges, only: [:new, :create]
+
 end
