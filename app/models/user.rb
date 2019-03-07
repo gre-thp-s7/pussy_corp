@@ -9,8 +9,8 @@ class User < ApplicationRecord
   has_many :orders, through: :cart
 
 
-	validates :first_name, presence: true
-  validates :last_name, presence: true
+	# validates :first_name, presence: true
+  # validates :last_name, presence: true
 
 # ho, tout l'email en minuscule ;-)
   before_save { self.email = email.downcase }

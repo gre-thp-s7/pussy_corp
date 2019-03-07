@@ -20,17 +20,15 @@ class UserMailer < ApplicationMailer
 
     @user = User.new
 
-    @url = "lien mort"
-
-    # @url = LIEN DE SA PAGE PROFIL
+    @url = "lien de sa page profil"
 
     mail(
       to: @user.email,
       subject:'Merci pour votre commande!'
       )
 
-    #Pièce jointe
-  #  attachments['file.jpg'] = File.read('path/to/file.jpg')
+  #Pièce jointe
+  #attachments['file.jpg'] = File.read('path/to/file.jpg')
   end
 
   def admin_order_comfirmation

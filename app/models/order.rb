@@ -14,5 +14,5 @@ class Order < ApplicationRecord
     UserMailer.order_comfirmation(self).deliver_now
 
   end
-#=============================================
+#==============================================
 end
