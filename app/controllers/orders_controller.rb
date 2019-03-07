@@ -17,13 +17,42 @@ class OrdersController < ApplicationController
 
   # POST /orders
   def create
+
     @order = Order.new(order_params)
 
+    @order.product_list.each do |product|
+    @total = @total + product.price
+    end
+
+# Amount in cents
+@amount = @total*100
+
+customer = Stripe::Customer.create(
+  {
+  email: params[:stripeEmail],
+  source: params[:stripeToken],
+  })
+
+charge = Stripe::Charge.create(
+  {
+  customer: customer.id,
+  amount: @amount.to_i,
+  description: "Paiement Stripe",
+  currency: 'eur',
+  })
+
+
       if @order.save
-      # STRIPE HERE
+        flash[:success] = "La commande est validée"
+        redirect_to root_path
       else
         flash[:error] = "Il y a eu un problème lors de la création de la commande, contactez notre service client"
       end
+
+    rescue Stripe::CardError => e
+      flash[:error] = e.message
+      redirect_to order_path(@cart)
+    end
   
   end
 

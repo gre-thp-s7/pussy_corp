@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   #   post 'login', to: 'devise/sessions#create', as: :user_session
   #   delete 'logout', to: 'devise/sessions#destroy', as: :destroy_user_session
   # end
-
+  resources :order, only: [:create]
 
   resources :products
 
@@ -22,6 +22,6 @@ Rails.application.routes.draw do
 
   root 'products#index'
 
-  #stripe
+  #stripe test
   resources :charges, only: [:new, :create]
 end
