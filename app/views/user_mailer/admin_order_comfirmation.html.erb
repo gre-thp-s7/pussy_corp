@@ -1,7 +1,17 @@
-<%= @user.first_name %> a passé une commande!
-=============================================
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1><%= @user.first_name %> a passé une commande!</h1>
+    <p>
+      Commande n°<%= @order.id %>
+    <br>
+    </p>
 
-Commande n°<%= @order.id %>
-
-
-Allez sur l'espace admin <%= link_to "Admin dashboard", @url %>.
+    <p>
+      Allez sur l'espace admin <%= link_to "Admin dashboard", @url %>.
+    </p>
+  </body>
+</html>
