@@ -1,27 +1,8 @@
-    <section id="home-slider">
-        <div class="container">
-            <div class="row">
-                <div class="main-slider">
-                    <div class="slide-text">
-                        <h1>Photos</h1>
-                        <p>Boudin doner frankfurter pig. Cow shank bresaola pork loin tri-tip tongue venison pork belly meatloaf short loin landjaeger biltong beef ribs shankle chicken andouille.</p>
-                        
-                        <%= link_to "SIGN UP", new_user_session_path, class: "btn btn-common" %>
-                    </div>
-                    <%= image_tag "banner/chat-1.png", class: "slider-birds2"  %>
-                    <%= image_tag "banner/chat-2.png", class: "slider-sun"  %> 
-                    <%= image_tag "banner/chat-3.png", class: "slider-house"  %>
-                </div>
-            </div>
-        </div>
-        <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
-    </section>
-    <!--/#home-slider-->
-    <%= render 'products/lastestproducts'%>
-    <!--/#services-->
-    <%= render 'products/happyclients'%>
-    <!--/#clients-->
-
-    <%= render "cards"%>
-
-
+<!-- here is the banner with the three kitten-->
+<%= render 'products/threekittenbanner'%>
+<!-- here is the lastest pictures -->
+<%= render 'products/lastestproducts'%>
+<!-- here is happy clients testimonial -->
+<% render 'products/happyclients'%>
+<!-- here is the cards by guyguy -->
+<%= render "cards"%>
