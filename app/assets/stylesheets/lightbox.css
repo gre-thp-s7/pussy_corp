@@ -1,6 +1,7 @@
 /* Preload images */
+/* i've put thes img in the folder and in aws s3 but doesn't works */
 body:after {
-  content: url(../images/lightbox/close.png) url(../images/lightbox/loading.gif) url(../images/lightbox/prev.png) url(../images/lightbox/next.png);
+  content: url(https://s3.eu-west-3.amazonaws.com/pussy-corp-public/logo.png) url(../images/lightbox/loading.gif) url(../images/lightbox/prev.png) url(../images/lightbox/next.png);
   display: none;
 }
 

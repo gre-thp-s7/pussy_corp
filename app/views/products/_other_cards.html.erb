@@ -11,7 +11,8 @@
                             </div>
                             <div class="portfolio-view">
                                 <ul class="nav nav-pills">
-                                    <li><a href="images/portfolio/1.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                    <li><%= link_to "show", product_path(random.id) %></li>
+                                    <li><a href="<%= url_for(random.picture)%>" data-lightbox="<%=random.id%>"><i class="fa fa-eye"></i></a></li>
                                 </ul>
                             </div>
                         </div>
