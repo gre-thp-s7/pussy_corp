@@ -5,6 +5,9 @@ class Products < ActiveRecord::Migration[5.2]
       t.text :description
       t.string :price
       t.string :image_url
+      
+  	  t.timestamps
+
     end
   end
 end

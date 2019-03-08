@@ -1,18 +1,31 @@
-    <section id="home-slider">
-        <div class="container">
-            <div class="row">
-                <div class="main-slider">
-                    <div class="slide-text">
+<section id="home-slider">
+    <div class="container">
+        <div class="row">
+            <div class="main-slider">
+                <div class="slide-text" style="position: relative">
+
+                    <% if user_signed_in? %>
+
+                        <h1>salut toi !</h1>
+                        <p>Je vois qu'on se connais, j'espère tu vas adorer les nouveautés (si il y en a) !</p>
+
+                        <%= link_to "VIEN ON EST BIEN", root_path(:anchor => "page-breadcrumb"), class: "btn btn-common"  %>
+
+                    <% else %> 
+
                         <h1>éh toi !</h1>
-                        <p>Si toi aussi t'aime les petites chattes, viens, inscrit toi et tu aura acces a toutes les photos les plus récentes du web</p>
-                        
+                        <p>Si toi aussi t'aime les petit(es) chat(tes), viens, inscrit toi et tu aura acces a toutes les photos les plus récentes du web</p>
+
                         <%= link_to "SIGN UP", new_user_session_path, class: "btn btn-common" %>
-                    </div>
-                    <%= image_tag "banner/chat-1.png", class: "slider-birds2"  %>
-                    <%= image_tag "banner/chat-2.png", class: "slider-sun"  %> 
-                    <%= image_tag "banner/chat-3.png", class: "slider-house"  %>
+                    <%end%>
+
                 </div>
+                <%= image_tag "banner/chat-1.png", class: "slider-birds2"  %>
+                <%= image_tag "banner/chat-2.png", class: "slider-sun"  %> 
+                <%= image_tag "banner/chat-3.png", class: "slider-house"  %>
             </div>
         </div>
-        <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
-    </section>
+    </div>
+
+    <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
+</section>

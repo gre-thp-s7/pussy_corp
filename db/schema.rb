@@ -61,6 +61,8 @@ ActiveRecord::Schema.define(version: 2019_03_06_153957) do
     t.text "description"
     t.string "price"
     t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -24,4 +24,5 @@ Rails.application.routes.draw do
 
   #stripe test
   resources :charges, only: [:new, :create]
+
 end
